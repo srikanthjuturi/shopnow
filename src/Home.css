@@ -1,0 +1,127 @@
+.move-slider{
+    display: grid;
+    place-items: center;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+.move-slider::after,.move-slider::before{
+    background: linear-gradient(to right,rgb(255, 255, 255,0) 0%,rgba(255, 255, 255,1) 100%);
+    position: absolute;
+    width: 10%;
+    content: '';
+    height: 100%;
+}
+.move-slider::before{
+    left: 0px;
+    top: 0px;
+    transform: rotateZ(180deg);
+
+}
+.move-slider::after{
+    right: 0px;
+    top: 0px;
+    transform: rotateZ(360deg);
+}
+.track-slider{
+    display: flex;
+    gap: 40px;
+    animation: scroll 40s linear infinite;
+}
+.track-slider:hover{
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.move-slide{
+    height: 150px;
+    width: calc(100px * 1);
+    padding: 10px;
+    perspective: 100px;
+}
+.image-in-move-silde{
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.image-in-move-silde:hover{
+    transform: translateZ(20px);
+}
+
+/* ______cards */
+.cards-main{
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+/* _____________________________________circle motion__________ */
+.circle-main-div{
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.circle-container {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    height: 100vh; /* Adjust height as needed */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 10s infinite linear; /* Animation for rotation */
+    overflow: hidden;
+}
+
+.circle-item {
+    position: absolute;
+    width: 130px; /* Adjust size as needed */
+    height: 130px; /* Adjust size as needed */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #007bff; /* Change color as needed */
+    border-radius: 50%; /* To make it circular */
+    color: white;
+    font-size: 20px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+/* Positioning the items in a circular manner */
+.circle-item:nth-child(1) { transform: rotate(60deg) translate(200px) rotate(-60deg); }
+.circle-item:nth-child(2) { transform: rotate(120deg) translate(200px) rotate(-120deg); }
+.circle-item:nth-child(3) { transform: rotate(180deg) translate(200px) rotate(-180deg); }
+.circle-item:nth-child(4) { transform: rotate(240deg) translate(200px) rotate(-240deg); }
+.circle-item:nth-child(5) { transform: rotate(300deg) translate(200px) rotate(-300deg); }
+.circle-item:nth-child(6) { transform: rotate(360deg) translate(200px) rotate(-360deg); }
+
+
+
+ .head-circle-item{
+    position: absolute;
+    top: -40px;
+    color: red;
+    z-index: 99;
+ }
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* _________________carosuel cards___________________________ */
+.image-in-scrolling{
+    object-fit: cover;
+}

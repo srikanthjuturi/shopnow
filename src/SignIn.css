@@ -1,0 +1,88 @@
+.sign-in-main{
+    background-color:rgb(226, 226, 227) ;
+    margin-top: 10px;
+    height: fit-content;
+}
+.first-name-last-name-div{
+    display: flex;
+    justify-content: space-between;
+}
+.first-name{
+    width: 48%;
+}
+.buttons-main-in-signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next-button-in-signin{
+    color: aliceblue;
+    background-color: #6A9C89;
+    font-size: 20px;
+   border: 2px solid  #6A9C89;
+}
+.next-button-in-signin:hover{
+   border: 2px solid  #6A9C89;
+   transition: all 0.5s;
+    
+}
+.prev-button-in-signin{
+    color: aliceblue;
+   border: 2px solid  #6A9C89;
+background-color: #6A9C89;
+    font-size: 20px;
+    margin-right:30px;
+}
+.prev-button-in-signin:hover{
+   border: 2px solid  #6A9C89;
+   transition: all 0.5s;
+}
+.flex-in-address-in-signup{
+    display: flex;
+    justify-content: space-between;
+}
+.city-in-signin{
+    width: 48%;
+}
+.progress-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    /* width: 80%; */
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.progress-section {
+    width: 30%;
+    height: 5px;
+    background-color: #d3d3d3; /* Default unfilled color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition when filled */
+}
+
+.filled {
+    background-color: #28a745; /* Green for filled sections */
+}
+
+
+@media screen and (min-width: 320px)  and (max-width:578px){
+    .first-name-last-name-div{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .first-name{
+        width: 100%;
+    }
+    .flex-in-address-in-signup{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .city-in-signin{
+        width: 100%;
+    }
+    
+}
